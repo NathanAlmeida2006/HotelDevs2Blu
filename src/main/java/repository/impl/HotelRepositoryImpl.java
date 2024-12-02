@@ -38,7 +38,7 @@ public class HotelRepositoryImpl implements HotelRepository {
     }
 
     /**
-     * Altera o estado do quarto identificado pelo número.
+     * Altera o estado do quarto.
      * O estado do quarto é transitado para o próximo estado conforme a lógica do padrão State.
      *
      * @param numeroQuarto O número do quarto que terá o estado alterado.
