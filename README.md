@@ -1,55 +1,54 @@
-Sistema de Reservas de Hotel
+# Sistema de Reservas de Hotel
 
-Este projeto é um sistema de gerenciamento de reservas de quartos em um hotel, desenvolvido com base nos princípios **SOLID** e utilizando os padrões de projeto **Facade** e **State**. A aplicação foi construída com **Java** e **Maven**, integrando boas práticas de desenvolvimento de software.
+Este projeto é um sistema de gerenciamento de reservas de quartos em um hotel, desenvolvido com base nos princípios **SOLID** e utilizando os padrões de projeto **Facade** e **State**. A aplicação foi construída em **Java**, com gerenciamento de dependências pelo **Maven**, e apresenta uma interface no console.
 
 ---
- ✨ Funcionalidades
 
-1. Gerenciamento de Quartos
-   - Visualização da disponibilidade.
-   - Atributos como número do quarto e status de ocupação.
+## ✨ Funcionalidades
+
+1. **Gerenciamento de Quartos**:
+   - Visualização da disponibilidade dos quartos.
+   - Gerenciamento do estado dos quartos (Disponível, Ocupado, Aguardando, limpando ).
 
 2. **Reservas**:
-   - Lógica para reservar e liberar quartos.
-   - Controle de disponibilidade para evitar conflitos.
+   - Realização e liberação de reservas com controle de disponibilidade.
 
 3. **Interface no Console**:
-   - Interação simples e intuitiva para exibir informações e realizar operações.
+   - Permite que o usuário interaja diretamente com o sistema para realizar operações.
 
 ---
 
 ## 🛠️ Padrões de Projeto Utilizados
 
 ### **Facade**
-- Implementado para simplificar a interação entre diferentes componentes do sistema, como a classe `Hotel`, que centraliza e abstrai as operações de gerenciamento de quartos e reservas.
+- Centraliza e simplifica as operações relacionadas a quartos e reservas na classe `Hotel`.
 
 ### **State**
-- Utilizado para gerenciar os diferentes estados dos quartos (ex.: Disponível, Ocupado, Em Manutenção), permitindo mudanças dinâmicas de comportamento conforme o estado atual.
+- Gerencia os diferentes estados de um quarto (Disponível, Ocupado, Em Manutenção), alterando dinamicamente seu comportamento.
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-### Diretórios e Arquivos
+### Organização de Pastas
 
-- **`src/main/java`**: Código-fonte principal organizado por pacotes.
-- **`src/main/resources`**: Recursos do sistema, como configurações.
-- **`src/test/java`**: Testes automatizados.
-- **`pom.xml`**: Arquivo de configuração do Maven, incluindo dependências e plugins.
+- **`src/main/java`**: Código-fonte principal, incluindo a classe `app.Main`, ponto de entrada do sistema.
+- **`src/main/resources`**: Recursos adicionais, como configurações.
+- **`pom.xml`**: Arquivo Maven contendo dependências e plugins necessários.
 
 ### Classes Principais
 
 - **`Quarto`**:
-  - Representa os quartos do hotel e usa o padrão **State** para gerenciar mudanças de status.
+  - Representa os quartos do hotel e utiliza o padrão **State** para alterar dinamicamente o comportamento com base no estado.
 
 - **`Reserva`**:
-  - Lida com a lógica de reservas, interagindo com o estado dos quartos.
+  - Implementa a lógica para reservar e liberar quartos.
 
 - **`Hotel`**:
-  - Centraliza as operações do sistema, implementando o padrão **Facade** para simplificar a interação com os outros componentes.
+  - Gerencia a lista de quartos e centraliza operações do sistema, utilizando o padrão **Facade**.
 
 - **`Main`**:
-  - Ponto de entrada da aplicação, gerenciando a interface do console.
+  - Localizada em `java/app/Main`, esta é a classe principal que inicia o sistema e gerencia a interface com o usuário.
 
 ---
 
@@ -65,12 +64,12 @@ Este projeto é um sistema de gerenciamento de reservas de quartos em um hotel, 
 ## 🏁 Como Executar
 
 1. **Pré-requisitos**:
-   - **Java 11+** e **Maven** instalados.
+   - Certifique-se de ter o **Java 11+** e o **Maven** instalados.
 
 2. **Clone o Repositório**:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
-   cd sistema-reserva-hotel
+   git clone https://github.com/NathanAlmeida2006/HotelDevs2Blu
+   cd HotelDevs2Blu
    ```
 
 3. **Compile o Projeto**:
@@ -80,7 +79,7 @@ Este projeto é um sistema de gerenciamento de reservas de quartos em um hotel, 
 
 4. **Execute a Aplicação**:
    ```bash
-   mvn exec:java -Dexec.mainClass="com.exemplo.Main"
+   mvn exec:java -Dexec.mainClass="app.Main"
    ```
 
 5. **Execute os Testes**:
@@ -92,19 +91,11 @@ Este projeto é um sistema de gerenciamento de reservas de quartos em um hotel, 
 
 ## 🌟 Diferenciais
 
-- **Boas práticas de programação**:
-  - Princípios SOLID aplicados para código modular e sustentável.
-- **Padrões de projeto bem integrados**:
-  - **Facade**: Simplificação da interface com o sistema.
-  - **State**: Mudança dinâmica no comportamento dos objetos.
-
----
-
-## 💡 Melhorias Futuras
-
-- Implementação de persistência de dados com banco de dados.
-- Criação de uma interface gráfica para melhor experiência do usuário.
-- Adição de notificações automáticas para reservas e cancelamentos.
+- **Princípios SOLID**:
+  - Código modular e extensível, aderindo às boas práticas.
+- **Padrões de projeto bem implementados**:
+  - **Facade** para simplificar a interação com componentes do sistema.
+  - **State** para gerenciar estados dinâmicos de quartos.
 
 ---
 
@@ -113,8 +104,8 @@ Este projeto é um sistema de gerenciamento de reservas de quartos em um hotel, 
 - **Membro 1**: Implementação da classe `Quarto` e lógica de estados.
 - **Membro 2**: Desenvolvimento da classe `Reserva`.
 - **Membro 3**: Gerenciamento e integração com a classe `Hotel` (Facade).
-- **Membro 4**: Desenvolvimento da interface console e testes.
+- **Membro 4**: Desenvolvimento da interface console e integração.
 
 ---
 
-Este projeto reflete a integração de conceitos avançados de programação em equipe, promovendo aprendizado e colaboração. 🚀
+Este projeto representa uma aplicação prática de conceitos avançados de design e arquitetura de software, promovendo a colaboração em equipe e o uso de boas práticas. 🚀
